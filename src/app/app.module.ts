@@ -20,7 +20,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -46,6 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
 		FormsModule,
 		HttpClientModule,
 		MatCardModule,
+		ReactiveFormsModule,
 	],
 	providers: [JokeService],
 	bootstrap: [AppComponent],
