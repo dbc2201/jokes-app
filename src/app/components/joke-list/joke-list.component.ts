@@ -27,25 +27,25 @@ export class JokeListComponent {
 				id: 1,
 				type: 'general',
 				setup: 'dummy setup',
-				punchline: 'punchline',
+				delivery: 'delivery',
 			},
 			{
 				id: 2,
 				type: 'general',
 				setup: 'dummy setup',
-				punchline: 'punchline',
+				delivery: 'delivery',
 			},
 			{
 				id: 3,
 				type: 'general',
 				setup: 'dummy setup',
-				punchline: 'punchline',
+				delivery: 'delivery',
 			},
 			{
 				id: 4,
 				type: 'general',
 				setup: 'dummy setup',
-				punchline: 'punchline',
+				delivery: 'delivery',
 			},
 		];
 	}
