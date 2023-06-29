@@ -7,7 +7,7 @@ import { Joke } from 'src/app/models/joke.model';
 	styleUrls: ['./joke-list.component.css'],
 })
 export class JokeListComponent {
-	private jokes: Joke[];
+	jokes: Joke[];
 
 	constructor() {
 		this.jokes = [
