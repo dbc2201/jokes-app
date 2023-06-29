@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Joke } from 'src/app/models/joke.model';
+import { JokeService } from 'src/app/services/joke-service.service';
 
 @Component({
 	selector: 'app-joke-list',
@@ -9,7 +10,7 @@ import { Joke } from 'src/app/models/joke.model';
 export class JokeListComponent {
 	jokes: Joke[];
 
-	constructor() {
+	constructor(private jokeService: JokeService) {
 		this.jokes = [
 			{
 				id: 1,
