@@ -9,4 +9,8 @@ import { Joke } from 'src/app/models/joke.model';
 export class JokeListComponent {
 	@Input()
 	jokes: Joke[];
+
+	constructor() {
+		this.jokes = [];
+	}
 }
