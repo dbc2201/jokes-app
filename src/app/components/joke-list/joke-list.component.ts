@@ -11,42 +11,18 @@ export class JokeListComponent {
 	jokes: Joke[];
 
 	constructor(private jokeService: JokeService) {
-		this.jokeService.getRandomJoke().subscribe({
-			next: (data) => {
-				console.log(typeof data);
-				console.log(data);
-			},
-			error: (error) => {
-				alert(error.message);
-				console.error(error);
-				console.error(error.message);
-			},
-		});
-		this.jokes = [
-			{
-				id: 1,
-				type: 'general',
-				setup: 'dummy setup',
-				delivery: 'delivery',
-			},
-			{
-				id: 2,
-				type: 'general',
-				setup: 'dummy setup',
-				delivery: 'delivery',
-			},
-			{
-				id: 3,
-				type: 'general',
-				setup: 'dummy setup',
-				delivery: 'delivery',
-			},
-			{
-				id: 4,
-				type: 'general',
-				setup: 'dummy setup',
-				delivery: 'delivery',
-			},
-		];
+		this.jokes = [];
+		for (let index = 0; index < 10; index++) {
+			this.jokeService.getRandomJoke().subscribe({
+				next: (joke: Joke) => {
+					this.jokes.push(joke);
+				},
+				error: (error) => {
+					alert(error.message);
+					console.error(error);
+					console.error(error.message);
+				},
+			});
+		}
 	}
 }
