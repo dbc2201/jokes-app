@@ -7,6 +7,7 @@ import { Component, EventEmitter } from '@angular/core';
 })
 export class JokeSearchComponent {
 	jokeSearchedEvent: EventEmitter<string>;
+	joke: string = '';
 
 	constructor() {
 		this.jokeSearchedEvent = new EventEmitter<string>();
@@ -16,7 +17,9 @@ export class JokeSearchComponent {
 	 * this function take a joke or a keyword to search for a joke
 	 * @param joke a joke or a keyword to search for a joke
 	 */
-	searchJoke(joke: string): void {}
+	searchJoke(joke: string): void {
+		this.jokeSearchedEvent.emit(joke);
+	}
 
 	/**
 	 * this function resets the search input and the joke list
