@@ -18,11 +18,15 @@ export class JokeSearchComponent {
 	 * @param joke a joke or a keyword to search for a joke
 	 */
 	searchJoke(joke: string): void {
-		this.jokeSearchedEvent.emit(joke);
+		this.joke = joke;
+		this.jokeSearchedEvent.emit(this.joke);
 	}
 
 	/**
 	 * this function resets the search input and the joke list
 	 */
-	resetSearch(): void {}
+	resetSearch(): void {
+		this.joke = '';
+		this.jokeSearchedEvent.emit(this.joke);
+	}
 }
