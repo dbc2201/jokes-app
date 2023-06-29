@@ -2,7 +2,10 @@
 	<!-- joke-search component -->
 	<div class="row mt-4">
 		<div class="col">
-			<app-joke-search class="fs-4"></app-joke-search>
+			<app-joke-search
+				class="fs-4"
+				(jokeSearchedEvent)="searchJokesArray($event)"
+			></app-joke-search>
 		</div>
 	</div>
 	<!-- joke-list component -->

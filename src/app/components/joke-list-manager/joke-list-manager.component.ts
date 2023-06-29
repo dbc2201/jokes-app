@@ -35,7 +35,15 @@ export class JokeListManagerComponent {
 
 	/**
 	 * this function searches for a joke or a keyword in the jokes in the jokes array
-	 * @param joke the joke or keyword to search for
+	 * @param searchedJoke the joke or keyword to search for
 	 */
-	searchJokesArray(joke: string): void {}
+	searchJokesArray(searchedJoke: string): void {
+		if (searchedJoke === '') {
+			this.initializeJokes();
+			return;
+		}
+		this.jokes = this.jokes.filter((jokeFromArray) =>
+			jokeFromArray.setup.includes(searchedJoke)
+		);
+	}
 }
