@@ -12,6 +12,10 @@ export class JokeListManagerComponent {
 
 	constructor(private jokeService: JokeService) {
 		this.jokes = [];
+		this.initializeJokes();
+	}
+
+	private initializeJokes() {
 		for (let index = 0; index < 10; index++) {
 			this.jokeService.getRandomJoke().subscribe({
 				next: (joke: Joke) => {
