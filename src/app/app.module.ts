@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { JokeCardComponent } from './components/joke-card/joke-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { JokeService } from './services/joke-service.service';
 
 @NgModule({
 	declarations: [
@@ -42,7 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
 		FormsModule,
 		HttpClientModule,
 	],
-	providers: [],
+	providers: [JokeService],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
