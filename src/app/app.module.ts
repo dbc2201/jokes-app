@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { JokeCardComponent } from './components/joke-card/joke-card.component';
 
 @NgModule({
 	declarations: [
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 		JokeListManagerComponent,
 		JokeSearchComponent,
 		JokeListComponent,
+  JokeCardComponent,
 	],
 	imports: [
 		BrowserModule,
