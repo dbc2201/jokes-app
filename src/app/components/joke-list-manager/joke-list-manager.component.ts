@@ -19,18 +19,6 @@ export class JokeListManagerComponent {
 	 * this function calls the Jokes API service to fetch jokes and initialize the jokes array
 	 */
 	private initializeJokes(): void {
-		// for (let index = 0; index < 10; index++) {
-		// 	this.jokeService.getRandomJoke().subscribe({
-		// 		next: (joke: Joke) => {
-		// 			this.jokes.push(joke);
-		// 		},
-		// 		error: (error) => {
-		// 			alert(error.message);
-		// 			console.error(error);
-		// 			console.error(error.message);
-		// 		},
-		// 	});
-		// }
 		this.jokeService.getTenRandomJokes().subscribe({
 			next: (response: any) => {
 				let jokes = response.jokes;

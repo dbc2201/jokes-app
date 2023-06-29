@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,7 @@ export class JokeSearchComponent {
 	@Output()
 	jokeSearchedEvent: EventEmitter<string>;
 
+	@Input('joke')
 	joke: string;
 
 	searchJokeForm: FormGroup;
