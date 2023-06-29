@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
 	styleUrls: ['./joke-search.component.css'],
 })
 export class JokeSearchComponent {
-	searchJoke(): void {}
+	/**
+	 * this function take a joke or a keyword to search for a joke
+	 * @param joke a joke or a keyword to search for a joke
+	 */
+	searchJoke(joke: string): void {}
 
-	resetSearchBar(): void {}
+	/**
+	 * this function resets the search input and the joke list
+	 */
+	resetSearch(): void {}
 }
