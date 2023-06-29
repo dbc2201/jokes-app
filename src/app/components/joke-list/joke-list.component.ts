@@ -11,6 +11,17 @@ export class JokeListComponent {
 	jokes: Joke[];
 
 	constructor(private jokeService: JokeService) {
+		this.jokeService.getRandomJoke().subscribe({
+			next: (data) => {
+				console.log(typeof data);
+				console.log(data);
+			},
+			error: (error) => {
+				alert(error.message);
+				console.error(error);
+				console.error(error.message);
+			},
+		});
 		this.jokes = [
 			{
 				id: 1,
