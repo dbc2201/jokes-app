@@ -13,6 +13,7 @@ import { MatListModule } from '@angular/material/list';
 import { JokeListManagerComponent } from './components/joke-list-manager/joke-list-manager.component';
 import { JokeSearchComponent } from './components/joke-search/joke-search.component';
 import { JokeListComponent } from './components/joke-list/joke-list.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
 	declarations: [
@@ -32,6 +33,7 @@ import { JokeListComponent } from './components/joke-list/joke-list.component';
 		MatIconModule,
 		MatListModule,
 		MatButtonModule,
+		MatInputModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
