@@ -1,41 +1,43 @@
-<div class="row">
-	<!-- search bar -->
-	<div class="col-8">
-		<mat-form-field class="col-12" appearance="outline">
-			<mat-label>search joke</mat-label>
-			<input
-				matInput
-				type="text"
-				id="search-joke"
-				placeholder="write joke keywords here"
-				#searchedJoke
-				[(ngModel)]="joke"
-			/>
-			<mat-icon matSuffix>search</mat-icon>
-		</mat-form-field>
+<form>
+	<div class="row">
+		<!-- search bar -->
+		<div class="col-8">
+			<mat-form-field class="col-12" appearance="outline">
+				<mat-label>search joke</mat-label>
+				<input
+					matInput
+					type="text"
+					id="search-joke"
+					placeholder="write joke keywords here"
+					#searchedJoke
+					[(ngModel)]="joke"
+				/>
+				<mat-icon matSuffix>search</mat-icon>
+			</mat-form-field>
+		</div>
+		<!-- search button -->
+		<div class="col-2">
+			<button
+				mat-raised-button
+				color="primary"
+				class="col-12"
+				type="submit"
+				(click)="searchJoke(searchedJoke.value)"
+			>
+				search
+			</button>
+		</div>
+		<!-- reset button -->
+		<div class="col-2">
+			<button
+				mat-raised-button
+				color="accent"
+				class="col-12"
+				type="reset"
+				(click)="resetSearch()"
+			>
+				reset
+			</button>
+		</div>
 	</div>
-	<!-- search button -->
-	<div class="col-2">
-		<button
-			mat-raised-button
-			color="primary"
-			class="col-12"
-			type="submit"
-			(click)="searchJoke(searchedJoke.value)"
-		>
-			search
-		</button>
-	</div>
-	<!-- reset button -->
-	<div class="col-2">
-		<button
-			mat-raised-button
-			color="accent"
-			class="col-12"
-			type="reset"
-			(click)="resetSearch()"
-		>
-			reset
-		</button>
-	</div>
-</div>
+</form>
