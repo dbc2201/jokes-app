@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
 	selector: 'app-joke-search',
@@ -10,6 +11,8 @@ export class JokeSearchComponent {
 	jokeSearchedEvent: EventEmitter<string>;
 
 	joke: string;
+
+	searchJokeForm: FormGroup;
 
 	constructor() {
 		this.jokeSearchedEvent = new EventEmitter<string>();
