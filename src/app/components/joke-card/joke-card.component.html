@@ -3,7 +3,7 @@
 		<mat-card-title>Joke #{{ joke.id }}</mat-card-title>
 	</mat-card-header>
 	<mat-card-content>
-		<p>{{ joke.setup }}</p>
+		<p>{{ joke.setup.charAt(0).toUpperCase() + joke.setup.slice(1) }}</p>
 		<mat-divider></mat-divider>
 	</mat-card-content>
 	<mat-card-actions>
