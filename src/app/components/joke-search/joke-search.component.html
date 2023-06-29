@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]="searchJokeForm">
 	<div class="row">
 		<!-- search bar -->
 		<div class="col-8">
@@ -11,7 +11,12 @@
 					placeholder="write joke keywords here"
 					#searchedJoke
 					[(ngModel)]="joke"
+					formControlName="joke"
+					required
 				/>
+				<mat-error>
+					cannot make empty search, please type something
+				</mat-error>
 				<mat-icon matSuffix>search</mat-icon>
 			</mat-form-field>
 		</div>

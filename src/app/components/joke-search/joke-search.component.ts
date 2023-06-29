@@ -1,5 +1,10 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import {
+	FormBuilder,
+	FormControl,
+	FormGroup,
+	Validators,
+} from '@angular/forms';
 
 @Component({
 	selector: 'app-joke-search',
@@ -14,9 +19,12 @@ export class JokeSearchComponent {
 
 	searchJokeForm: FormGroup;
 
-	constructor() {
+	constructor(private formBuilderService: FormBuilder) {
 		this.jokeSearchedEvent = new EventEmitter<string>();
 		this.joke = '';
+		this.searchJokeForm = this.formBuilderService.group({
+			joke: ['', Validators.required],
+		});
 	}
 
 	/**
