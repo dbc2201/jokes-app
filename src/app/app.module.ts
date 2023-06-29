@@ -15,24 +15,25 @@ import { JokeSearchComponent } from './components/joke-search/joke-search.compon
 import { JokeListComponent } from './components/joke-list/joke-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    JokeListManagerComponent,
-    JokeSearchComponent,
-    JokeListComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		JokeListManagerComponent,
+		JokeSearchComponent,
+		JokeListComponent,
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MatToolbarModule,
+		MatButtonModule,
+		MatSidenavModule,
+		MatIconModule,
+		MatListModule,
+		MatButtonModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
