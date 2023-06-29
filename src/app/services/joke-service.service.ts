@@ -15,7 +15,7 @@ export class JokeService {
 	 */
 	getRandomJoke(): Observable<Joke> {
 		return this.httpService.get<Joke>(
-			'https://v2.jokeapi.dev/joke/programming?type=twopart'
+			'https://v2.jokeapi.dev/joke/programming?type=twopart&safe-mode'
 		);
 	}
 
