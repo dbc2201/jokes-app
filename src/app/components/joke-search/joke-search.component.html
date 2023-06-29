@@ -16,13 +16,25 @@
 	</div>
 	<!-- search button -->
 	<div class="col-2">
-		<button mat-raised-button color="primary" class="col-12" type="submit">
+		<button
+			mat-raised-button
+			color="primary"
+			class="col-12"
+			type="submit"
+			(click)="searchJoke(searchedJoke.value)"
+		>
 			search
 		</button>
 	</div>
 	<!-- reset button -->
 	<div class="col-2">
-		<button mat-raised-button color="accent" class="col-12" type="reset">
+		<button
+			mat-raised-button
+			color="accent"
+			class="col-12"
+			type="reset"
+			(click)="resetSearch()"
+		>
 			reset
 		</button>
 	</div>

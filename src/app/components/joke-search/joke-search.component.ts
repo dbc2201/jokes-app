@@ -1,4 +1,4 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
 	selector: 'app-joke-search',
@@ -6,11 +6,14 @@ import { Component, EventEmitter } from '@angular/core';
 	styleUrls: ['./joke-search.component.css'],
 })
 export class JokeSearchComponent {
+	@Output()
 	jokeSearchedEvent: EventEmitter<string>;
-	joke: string = '';
+
+	joke: string;
 
 	constructor() {
 		this.jokeSearchedEvent = new EventEmitter<string>();
+		this.joke = '';
 	}
 
 	/**
