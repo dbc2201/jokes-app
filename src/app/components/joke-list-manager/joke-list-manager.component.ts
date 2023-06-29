@@ -15,7 +15,10 @@ export class JokeListManagerComponent {
 		this.initializeJokes();
 	}
 
-	private initializeJokes() {
+	/**
+	 * this function calls the Jokes API service to fetch jokes and initialize the jokes array
+	 */
+	private initializeJokes(): void {
 		for (let index = 0; index < 10; index++) {
 			this.jokeService.getRandomJoke().subscribe({
 				next: (joke: Joke) => {
@@ -29,4 +32,10 @@ export class JokeListManagerComponent {
 			});
 		}
 	}
+
+	/**
+	 * this function searches for a joke or a keyword in the jokes in the jokes array
+	 * @param joke the joke or keyword to search for
+	 */
+	searchJokesArray(joke: string): void {}
 }
